@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JqueryEvent</title>
+</head>
+<body>
+    <p class="doubleclass">For example of Double Click</p>
+    <p class="mouseenterevenet">For example of mouse Enter.</p>
+    <p class="mousehover"> hello i am here for mouse hover</p>
+    <p class="onormulfunction">Demoishing multiple function</p>
+    <div id="hideshow"  style="height: 10%; width:50%;" >
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolore est aliquam natus at fugit, quaerat illo modi. Qui odit necessitatibus, sit perferendis porro ab nobis delectus eveniet tenetur illo nam fugiat incidunt voluptatem quisquam. Iure, fugiat reiciendis. Dignissimos, optio illo. Illum quos, nemo totam laborum culpa necessitatibus cupiditate. Nobis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, velit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi exercitationem quis mollitia laudantium, recusandae, asperiores nulla veritatis odit, iste sapiente et dolorem ea deserunt aspernatur consequatur pariatur enim ratione? Et praesentium, laudantium optio dolor odio iste deserunt eaque sed! In beatae natus illum dolorum dolor aliquid praesentium nisi laboriosam. Fugiat, rerum eaque illum aperiam obcaecati dolor quod similique esse expedita dicta! Aliquid, sapiente quidem quos earum aut ducimus eaque necessitatibus nemo magni rerum minima excepturi voluptas incidunt quia aspernatur est possimus ipsum, veniam quis distinctio doloremque alias. Nostrum repellat voluptatem atque dicta nihil quod doloremque perferendis, mollitia voluptas natus adipisci.0</p>
+    </div>
+    <button id="click">hide or show</button>
+    <button id="slideup">slideUp</button>
+    <button id="slidedown">slideDown</button>
+    <button id="slidetoogle">SlideToogle</button>
+    <button id="fadetoogle">fadetoogle</button>
+    
+    
+</body>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+    /*Events in j Jquery*/
+    // MouseEventS:-click,dbclick,mouseenter,mouseleave
+    // KeyboardEvent:-keypress,keydown,MediaKeyStatusMap
+    // FormEvents:-submit,change,focus,blur
+    // document/window events=load,resize,scroll,unload
+
+    // dblclick
+    $('.doubleclass').dblclick(function(){
+        console.log("you double click on p",this);
+    });
+
+    // mouseenter
+    $('.mouseenterevenet').mouseenter(function(){
+        console.log("mouseevent working",this);
+    });
+
+    //mouse hover
+    $('mousehover').hover(function(){
+        // for starting
+        console.log("you are hovering",this);
+    },function(){
+        // for leaving or or leave after hovering it
+        console.log("you have leave hovering");
+    });
+
+    // .on or to run multiple function
+    $('.onormulfunction').on({
+        click:function(){
+            console.log("you clicked on this",this);
+        },
+        mouseleave:function(){
+            console.log("you leave");
+        }
+    });
+    // $('#click').click(function(){
+    //     $('#hideshow').hide(1000);
+    // });
+
+    // hide and show option
+    // $('#click').on({
+    //     click:function(){
+    //         $('#hideshow').hide(2000);
+    //     },
+    //     dblclick:function(){
+    //         $('#hideshow').show(2000);
+    //     }
+    // });
+    
+
+    // fade is use for animation with effect
+    // Fadeout:-it starts hiding by fading and also be called another process of hidding data
+    // $('#click').click(function(){
+    //     $('#hideshow').fadeOut(2000);
+    // });
+
+    // FadeIn:-it starts showing by fading and also be called another process of showing data
+    // $('#click').click(function(){
+    //     $('#hideshow').fadeIn(2000);
+    // });
+    
+    // fadeOut and fadeIn and also be called another process of hidding and showing data
+    // used for also animation
+    // $('#click').on({
+    //     click:function(){
+    //         $('#hideshow').fadeOut(2000);
+    //     },
+    //     dblclick:function(){
+    //         $('#hideshow').fadeIn(2000);
+    //     }
+    // });
+     
+    // fade is use for animation with effect.it helps to hide and unhide data with fade effects
+    // $('#fadetoogle').click(function(){
+    //     $('#hideshow').fadeToggle(5000);
+    // });
+
+    // slideUp
+    // mainly used for animation slide up is used to make animation by sliding selected items from down to up
+    // $('#slideup').click(function(){
+    //     $('#hideshow').slideUp(2000);
+    // });
+
+    // slideDown
+    // mainly used for animation slide down is used to make animation by sliding selected items from up to down
+    // $('#slidedown').click(function(){
+    //     $('#hideshow').slideUp(2000);
+    // });
+
+    //slide toggle also used for animation it mainly used for closing and opening
+    // $('#slidetoogle').click(function(){
+    //     $('#hideshow').slideToggle(2000);
+    // });
+
+    //slide toggle with optional paramete
+    $('#slidetoogle').click(function(){
+        $('#hideshow').slideToggle(2000,function(){
+            console.log("slide toggle work sucessfully");
+        });
+    });
+
+
+</script>
+</html>

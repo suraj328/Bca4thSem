@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leraning Jqueery</title>
+</head>
+
+<body>
+    <header>Hello!I am learning JQuery for Devloping Websites</header>
+    <h1 id="idexample">Hello!I am id selector</h1>
+    <h2 class="classexample">hello i am class selector1</h2>
+    <h2 class="classexample">hello i am class selector2</h2>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+</body>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<!-- <script src="/js/2SelectorType.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script>
+    // for Action
+
+$(document).ready(function () {
+    /*
+        types of selector in html
+        1.element selector
+        2.id selector 
+        3.class selector
+        */
+
+
+    /*1.element selector[slected element by tag name.example:-div,p,section]
+    Example:-$('p').click();
+    example of element selector is given below:-*/
+    $('p').click(function () {
+        console.log("you clicked on p,this an example of id selector", this);//[console.log() is used to print in console].
+
+    });
+
+
+
+    //2.Id selector[Id selector helps to select an item by given id for example id="idname" and it is used BY#idname]
+    //    syntax:-$('#idexample').click(function();
+    // under givenprogram is an example of id selector
+    $('#idexample').click(function () {
+        console.log("this is an example of idselector,you clicked on id selected items", this);
+
+    });
+
+
+    //3.class selector[class selector helps to select an item by given id for example id="idname" and it is used BY#idname while using class we can select multiple html tag or element]
+    //syntax :-$('.classexample').function();
+    // under given is a program or example of class selector
+    $('.classexample').click(function () {
+
+        console.log("i am from class selecor example ,you clicked on class selector element", this);
+    });
+
+    //other selectors
+    //example $('*').click();it will select all element
+    //example $('p.classname').click();it will select only paragraph which belongs to classname given as like .classname
+    // example $('this').click();it will select only clicked items
+
+});
+</script>
+
+
+
+</html>

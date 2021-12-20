@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leraning Jqueery</title>
+</head>
+
+<body>
+    <h1>Hello!I am learning JQuery for Devloping Websites</h1>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+    <p>click practise</p>
+</body>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script>
+    $(document).ready(function () {//[this function will first if document is ready or not if yes it will execute otherwise it will let to render html document first].
+        // $('selector').click();//[this is the example of selector option  and apply action what to perfom for selected item].
+        // $('p').click();
+        $('p').click(function () {
+            // console.log("you clicked on p");//[console.log() is used to print in console].
+            // $('p').hide();//[it will hide all the given or p selected items from browser].
+            $(this).hide();//[this is a method here(it helps hide a clicked item one by one from selected p class item)].
+        });
+
+    });
+</script>
+
+</html>

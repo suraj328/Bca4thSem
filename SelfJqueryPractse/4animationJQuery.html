@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JqueryEvent</title>
+</head>
+<body>
+    <p class="doubleclass">For example of Double Click</p>
+    <p class="mouseenterevenet">For example of mouse Enter.</p>
+    <p class="mousehover"> hello i am here for mouse hover</p>
+    <p class="onormulfunction">Demoishing multiple function</p>
+    <button id="stop">stop</button>
+    <button id="click">animate</button>
+    <div id="anm"  style=" height: 10%; width:50%;" >
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolore est aliquam natus at fugit, quaerat illo modi. Qui odit necessitatibus, sit perferendis porro ab nobis delectus eveniet tenetur illo nam fugiat incidunt voluptatem quisquam. Iure, fugiat reiciendis. Dignissimos, optio illo. Illum quos, nemo totam laborum culpa necessitatibus cupiditate. Nobis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, velit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi exercitationem quis mollitia laudantium, recusandae, asperiores nulla veritatis odit, iste sapiente et dolorem ea deserunt aspernatur consequatur pariatur enim ratione? Et praesentium, laudantium optio dolor odio iste deserunt eaque sed! In beatae natus illum dolorum dolor aliquid praesentium nisi laboriosam. Fugiat, rerum eaque illum aperiam obcaecati dolor quod similique esse expedita dicta! Aliquid, sapiente quidem quos earum aut ducimus eaque necessitatibus nemo magni rerum minima excepturi voluptas incidunt quia aspernatur est possimus ipsum, veniam quis distinctio doloremque alias. Nostrum repellat voluptatem atque dicta nihil quod doloremque perferendis, mollitia voluptas natus adipisci.0</p>
+    </div>
+    <!-- <button id="slideup">slideUp</button>
+    <button id="slidedown">slideDown</button>
+    <button id="slidetoogle">SlideToogle</button>
+    <button id="fadetoogle">fadetoogle</button> -->
+    
+    
+</body>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+    // alert('hello');
+    $('#click').click(function(){
+        $('#anm').animate({
+            opacity:0.3,
+            height:'120px',
+            width:'500px'
+            
+        },2000)
+    });
+    $('#stop').click(function(){
+        $('#anm').stop();
+    });
+</script>
+</html>

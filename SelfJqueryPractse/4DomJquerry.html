@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JqueryEvent</title>
+</head>
+<body>
+    <div id="anm"  style="height: 10%; width:50%;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolore est aliquam natus at fugit, quaerat illo modi. Qui odit necessitatibus, sit perferendis porro ab nobis delectus eveniet tenetur illo nam fugiat incidunt voluptatem quisquam. Iure, fugiat reiciendis. Dignissimos, optio illo. Illum quos, nemo totam laborum culpa necessitatibus cupiditate. Nobis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, velit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi exercitationem quis mollitia laudantium, recusandae, asperiores nulla veritatis odit, iste sapiente et dolorem ea deserunt aspernatur consequatur pariatur enim ratione? Et praesentium, laudantium optio dolor odio iste deserunt eaque sed! In beatae natus illum dolorum dolor aliquid praesentium nisi laboriosam. Fugiat, rerum eaque illum aperiam obcaecati dolor quod similique esse expedita dicta! Aliquid, sapiente quidem quos earum aut ducimus eaque necessitatibus nemo magni rerum minima excepturi voluptas incidunt quia aspernatur est possimus ipsum, veniam quis distinctio doloremque alias. Nostrum repellat voluptatem atque dicta nihil quod doloremque perferendis, mollitia voluptas natus adipisci.</p>
+    </div>
+    <section>for adding class</section>
+    <article>for adding id</article>
+    <button id="click">click</button>
+    <textarea  id="ta" cols="30" rows="10">hello suraj</textarea>
+</body>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+    $('#anm').text('hello');//it will set text hello to existing 'one' or it will replace existing text by text('hello');
+    // $('#anm').text();it will return all text by selected id
+    // $('body).html()//it will return all the html content of body tag
+    // $('body).html('hello world')//it will set text inside body text as hello world
+    // $('#ta').val();//it will reurn all the value of selected item.
+    // $('#ta').val("type here");//it will set "type here " to existing value
+    // $('#anm').empty();//it will make empty to selected item.
+    // $('#click').remove();//it will remove the selected content.
+    // $('section').addClass('classadded');//it will add class to selected item with class name
+    
+    // for implementing css in jQuery
+    // $('section').css('background-color','red');//it will add backgorund color to red
+    // $('section').css('color','green');it will add backgorund font color to green
+
+    // ajax in jquery
+    $.get('https://code.jquery.com/jquery-3.6.0.js',function(data,status){alert(data);});
+</script>
+</html>

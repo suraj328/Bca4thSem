@@ -5,6 +5,7 @@
         $password=$_POST['password'];
         $cpassword=$_POST['cpassword'];
         if($password==$cpassword){
+            $passrd=password_hash($cpassword,PASSWORD_BCRYPT);
             $sql="SELECT * FROM `Registerd_Account`where `Username`='$name'";
             $result=mysqli_query($conn,$sql);
             $matchrow=mysqli_num_rows($result);
@@ -13,7 +14,7 @@
             }
             
             if($matchrow==0){
-                $sql="INSERT  INTO `Registerd_Account`(`Username`,`Password`)VALUES('$name','$password')";
+                $sql="INSERT  INTO `Registerd_Account`(`Username`,`Password`)VALUES('$name','$passrd')";
                 if(mysqli_query($conn,$sql)){
                     echo"Registerd Sucessfully";
                     $logg=true;
@@ -46,7 +47,7 @@
     <section>
     <fieldset>
         <legend>sign up page!!</legend>
-        <form action="http://localhost/folder/Signup.php" method="POST">
+        <form action="http://localhost/Session_With_Hashing/Signup.php" method="POST">
         <Table>
             <tr>
                 <td><label for="username">User Name</label></td>

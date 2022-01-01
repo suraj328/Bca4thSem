@@ -44,3 +44,17 @@
     </form></div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="http://localhost/FileupLoad/display.php" method="GET" >
+            <button type="submit" name="check-details">check-details</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Document.write('<h1>hello i am from main js<h1>');

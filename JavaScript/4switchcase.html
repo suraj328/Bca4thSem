@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="switch-case-div"></div>
+</body>
+<script>
+    num= new Date().getDay();
+    document.write(num);
+    text='';
+    switch(new Date().getDay()){
+        case 0:
+            text='Today is sunday';
+            break;
+        case 1:
+            text='Today is Monday.';
+            break;
+
+        case 2:
+            text='Today is Tuesday';
+            break;
+        case 6:
+            text='Today is Saturday';
+            break;
+        default:
+            text='Not a Known day';
+            break;
+    }
+    document.getElementById('switch-case-div').innerHTML=text;
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Enter Your Number">
+    <button onclick="checkEven ()">
+        checkEven
+    </button>
+    <div>
+        <p>concat</p>
+        <input type="text" id="text1" placeholder="Enter Your Number">
+        <input type="text" id="text2" placeholder="Enter Your Number">
+    <button onclick="concaT ()">
+        concaT
+    </button>
+    </div>
+</body>
+<script>
+    function checkEven() {
+        // a=20;
+        a = document.getElementById('number').value;
+        if (a % 2 == 0) {
+            alert('even');
+            console.log('even number');
+            document.write('even number');
+        } else {
+            alert('not even');
+            console.log('not even number');
+            document.write('not even number');
+        }
+    }
+
+    function concaT() {
+        // a=20;
+        a =document.getElementById('text1').value;
+        b=document.getElementById('text2').value;
+        c=a+b;
+        document.write(c);
+    }
+</script>
+
+</html>

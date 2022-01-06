@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="Calculator-box">
+        <div class="calculator">
+            <input type="text" name="screen" id="screen">
+            <table class="calculator-table">
+                <tr>
+                    <td><button onclick="clickOtherOperator('(')">(</button></td>
+                    <td><button onclick="clickOtherOperator(')')">)</button></td>
+                    <td><button onclick="clickCLEAR('C')">C</button></td>
+                    <td><button onclick="clickOPERATOR('%')">%</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="clickNum('7')">7</button></td>
+                    <td><button onclick="clickNum('8')">8</button></td>
+                    <td><button onclick="clickNum('9')">9</button></td>
+                    <td><button onclick="clickOPERATOR('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="clickNum('4')">4</button></td>
+                    <td><button onclick="clickNum('5')">5</button></td>
+                    <td><button onclick="clickNum('6')">6</button></td>
+                    <td><button onclick="clickOPERATOR('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="clickNum('1')">1</button></td>
+                    <td><button onclick="clickNum('2')">2</button></td>
+                    <td><button onclick="clickNum('3')">3</button></td>
+                    <td><button onclick="clickOPERATOR('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="clickNum('0')">0</button></td>
+                    <td><button onclick="clickNum('.')">.</button></td>
+                    <td><button onclick="clickOPERATOR('/')">/</button></td>
+                    <td><button onclick="clickEvaluate('=')">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

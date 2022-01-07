@@ -43,3 +43,9 @@ function clickEvaluate(Evaluate) {
         }
     }
 }
+
+function clickDel() {
+    temp = screen.value;
+    res = temp.slice(0, -1);
+    screen.value = res;
+}

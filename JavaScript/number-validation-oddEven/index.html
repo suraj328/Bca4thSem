@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="event.preventDefault();validateNumber();">
+        <input type="text" name="" id="num">
+        <div>status:<span id="result"></span></div>
+
+        <button type="submit">check</button>
+    </form>
+    <script>
+        screen = document.getElementById('num');
+        // first process
+        // function validateNumber() {
+        //     var x = document.getElementById('num').value;
+        //     if (!isNaN(x)) {
+        //         if (x % 2 == 0) {
+        //             // screen.value = 'even';
+        //             document.getElementById('result').innerHTML = 'even';
+        //         } else {
+        //             // screen.value = 'odd';
+        //             document.getElementById('result').innerHTML = 'odd';
+        //         }
+        //     } else {
+        //         alert('please enter a number to check');
+        //     }
+
+        // }
+
+
+        // second process
+        function validateNumber() {
+            var x = document.getElementById('num').value;
+            if (x % 1 == 0) {
+                if (x % 2 == 0) {
+                    // screen.value = 'even';
+                    document.getElementById('result').innerHTML = 'even';
+                } else {
+                    // screen.value = 'odd';
+                    document.getElementById('result').innerHTML = 'odd';
+                }
+            } else {
+                alert("please enter  a  number");
+            }
+        }
+    </script>
+</body>
+
+</html>

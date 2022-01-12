@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in-form-validation</title>
+</head>
+
+<body>
+    <form action="#" id="login-form" onsubmit="event.preventDefault(); validateLogin();">
+        <input type="text" placeholder="Username" id="user-name" name="username">
+        <input type="text" placeholder="enteryour password" id="password" name="password">
+        <button type="submit" value="login">login</button>
+
+    </form>
+    <script>
+        function validateLogin() {
+            var userName = document.getElementById('user-name').value;
+            var password = document.getElementById('password').value;
+
+            if (userName == '') {
+                alert('username empty');
+                return false;
+            }
+            if (password == '') {
+                alert('password empty');
+                return false;
+            } else {
+                if (password.length < 8) {
+                    alert('password must be 8 character');
+                }
+            }
+            document.getElementById('login-form').submit();
+        }
+    </script>
+</body>
+
+</html>

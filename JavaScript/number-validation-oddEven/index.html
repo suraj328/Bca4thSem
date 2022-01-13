@@ -38,16 +38,21 @@
         // second process
         function validateNumber() {
             var x = document.getElementById('num').value;
+            x = x.trim();
             if (x % 1 == 0) {
-                if (x % 2 == 0) {
-                    // screen.value = 'even';
-                    document.getElementById('result').innerHTML = 'even';
+                if (x == '') {
+                    alert('hey!you fool enter a number first');
                 } else {
-                    // screen.value = 'odd';
-                    document.getElementById('result').innerHTML = 'odd';
+                    if (x % 2 == 0) {
+
+                        document.getElementById('result').innerHTML = 'even';
+                    } else {
+
+                        document.getElementById('result').innerHTML = 'odd';
+                    }
                 }
             } else {
-                alert("please enter  a  number");
+                alert("please enter  a  integer value it's inavlaid");
             }
         }
     </script>

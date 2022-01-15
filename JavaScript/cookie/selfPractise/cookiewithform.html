@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookiee with form</title>
+</head>
+
+<body>
+    <form action="#">
+        <input type="name" placeholder="enter your name" id="name">
+        <br>
+        <input type="text" name="email" placeholder="your email" id="email">
+        <br>
+        <input type="text" placeholder="your id" id="id">
+        <br>
+        <br>
+        <button onclick="setCookie();">setCookie</button>
+        <button onclick="getCookie()">getCookie</button>
+    </form>
+    <script>
+        function setCookie() {
+            document.cookie = "name=" + document.getElementById('name').value;
+            document.cookie = "email=" + document.getElementById('email').value;
+            document.cookie = "id=" + document.getElementById('id').value;
+        }
+        // alert(document.cookie);
+        function getCookie() {
+            var cookieArray = document.cookie.split(';');
+            // console.log(cookieArray[2]);
+            for (let i = 0; i < cookieArray.length; i++) {
+                // console.log(cookieArray[i]);
+                var cookieValue = cookieArray[i].split('=');
+                console.log(cookieValue);
+
+                if (cookieValue[0].trim() == 'name') {
+                    document.getElementById('name').value = cookieValue[1];
+
+                } else if (cookieValue[0].trim() == 'email') {
+                    document.getElementById('email').value = cookieValue[1];
+
+                } else if (cookieValue[0].trim() == 'id') {
+                    document.getElementById('id').value = cookieValue[1];
+
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

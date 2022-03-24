@@ -1,0 +1,27 @@
+[
+    {
+      "student_id": "1",
+      "student_name": "suraj",
+      "student_addrress": "bardibas"
+    },
+    {
+      "student_id": "2",
+      "student_name": "mohan",
+      "student_addrress": "japan"
+    },
+    {
+      "student_id": "3",
+      "student_name": "Anil",
+      "student_addrress": "kathmandu"
+    },
+    {
+      "student_id": "4",
+      "student_name": "bipul",
+      "student_addrress": "chitwan"
+    },
+    {
+      "student_id": "5",
+      "student_name": "subin",
+      "student_addrress": "hetauda"
+    }
+  ]
